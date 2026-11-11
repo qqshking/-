@@ -26,14 +26,15 @@ h1{font-size:clamp(36px,9vw,56px);line-height:1.03;margin:14px 0 10px}.sub{color
 <span class="chip">Учебный портал</span>
 <h1>Тесты</h1>
 <p class="sub">Выберите раздел и приступайте к тестированию. Тесты открываются на этом устройстве; результаты и прогресс сохраняются в браузере.</p>
-<h2 class="section-title">Доступные тесты <span id="total" class="chip">1</span></h2>
+<h2 class="section-title">Доступные тесты <span id="total" class="chip">2</span></h2>
 <div class="list" id="tests"></div>
 <p class="foot">Для добавления новых тестов разместите их HTML-файлы рядом с index.html и добавьте запись в список TEST_CATALOG в коде главной страницы.</p>
 </main>
 <script>
 // Добавление нового теста: загрузите его HTML-файл и добавьте объект в массив ниже.
 const TEST_CATALOG=[
-  {title:'Анатомия',subtitle:'Коллоквиум 1 · Остеология и артрология',file:'anatomy_test.html?launch=1',category:'Анатомия'}
+  {title:'Анатомия',subtitle:'Коллоквиум 1 · Остеология и артрология',file:'anatomy_test.html',category:'Анатомия'},
+  {title:'Практика по получению первичных медицинских умений и навыков педиатрического профиля',subtitle:'Коллоквиум 1 · 584 вопроса',file:'practice_test.html',category:'Практика'}
 ];
 const list=document.getElementById('tests');
 document.getElementById('total').textContent=TEST_CATALOG.length;
@@ -48,4 +49,3 @@ for(const t of TEST_CATALOG){
 </script>
 </body>
 </html>
-
